@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Eventos en JQuery</title>
+	<meta charset="utf-8" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>	
+
+<style>
+	.test{
+		background-color: red;
+	}
+</style>
+
+<script>
+
+	$(document).on('ready', function(){
+		$(document).on('click', function(){
+			//Añadir clases
+			//$("#test").addClass("test");
+
+			//Remover clase
+			//$("#test").removeClass("test");
+
+			//Agrega si no la tiene y si la tiene la quita
+			$("#test").toggleClass("test");
+
+			if($('#test').hasClass("test")){
+				$("#test").text("Hey! Soy rojo");
+			}
+			else{
+				$("#test").text("NO soy rojo");
+			}
+			
+		});
+		
+	})
+
+</script>
+
+</head>
+<body>
+	<div id="test" >
+		Click on Me ;)
+	</div>
+</body>
+</html>
